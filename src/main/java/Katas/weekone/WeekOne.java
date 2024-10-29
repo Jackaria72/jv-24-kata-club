@@ -8,7 +8,7 @@ public class WeekOne {
         // through MorseCode.get(code)
         StringBuilder decoded = new StringBuilder();
 
-        String spaceReplace = morseCode.replaceAll(" {3}", " = ");
+        String spaceReplace = morseCode.trim().replaceAll(" {3}", " = ");
         String[] split = spaceReplace.split(" ");
         for (int i = 0; i < split.length; i++) {
             if (split[i].equals("=")) {
@@ -17,7 +17,6 @@ public class WeekOne {
                 decoded.append(MorseCode.get(split[i]));
             }
         }
-
-    return decoded.toString();
+        return decoded.toString();
     }
 }
