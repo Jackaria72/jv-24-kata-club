@@ -28,7 +28,7 @@ public class MorseCode {
     private final String Y = "-.--";
     private final String Z = "--..";
 
-    public String get(String morseCodeLetter) {
+    public static String get(String morseCodeLetter) {
         String letter = "";
         switch (morseCodeLetter) {
             case ".-":
